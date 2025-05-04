@@ -1,0 +1,131 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time May  3 2025 14:50:03[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (79) boot:  3 storage          Unknown data     01 82 00310000 000e0000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=12f7b4h (1243060) map[0m
+[0;32mI (521) esp_image: segment 1: paddr=0013f7dc vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (521) esp_image: segment 2: paddr=0013f800 vaddr=3ffb0000 size=00818h (  2072) load[0m
+[0;32mI (526) esp_image: segment 3: paddr=00140020 vaddr=400d0020 size=e0694h (919188) map[0m
+[0;32mI (846) esp_image: segment 4: paddr=002206bc vaddr=3ffb0818 size=040e0h ( 16608) load[0m
+[0;32mI (853) esp_image: segment 5: paddr=002247a4 vaddr=40080000 size=194b8h (103608) load[0m
+[0;32mI (905) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (905) boot: Disabling RNG early entropy source...[0m
+[0;32mI (916) cpu_start: Multicore app[0m
+[0;32mI (924) cpu_start: Pro cpu start user code[0m
+[0;32mI (925) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (925) app_init: Application information:[0m
+[0;32mI (925) app_init: Project name:     i80_controller[0m
+[0;32mI (929) app_init: App version:      1[0m
+[0;32mI (933) app_init: Compile time:     May  3 2025 14:49:31[0m
+[0;32mI (938) app_init: ELF file SHA256:  571ab48e9...[0m
+[0;32mI (942) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (946) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (949) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (953) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (957) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (964) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (969) heap_init: At 3FFCC2D0 len 00013D30 (79 KiB): DRAM[0m
+[0;32mI (974) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (979) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (985) heap_init: At 400994B8 len 00006B48 (26 KiB): IRAM[0m
+[0;32mI (991) spi_flash: detected chip: generic[0m
+[0;32mI (994) spi_flash: flash io: dio[0m
+[0;33mW (997) pcnt(legacy): legacy driver is deprecated, please migrate to `driver/pulse_cnt.h`[0m
+[0;33mW (1004) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1015) main_task: Started on CPU0[0m
+[0;32mI (1025) main_task: Calling app_main()[0m
+[0;32mI (1025) example: Initialize Intel 8080 bus[0m
+D (1025) lcd_panel.io.i80: new i80 bus(0) @0x3ffcf460, 10 dma nodes, resolution 80000000Hz
+D (1025) lcd_panel.io.i80: new i80 lcd panel io @0x3ffd8d54 on bus(0), pclk=10000000Hz
+[0;32mI (1035) example: Install LCD driver of ili9486[0m
+[0;32mI (1035) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+D (1045) lcd_panel.st7789: new st7789 panel @0x3ffd8fc4
+[0;32mI (1175) example: Initialize LVGL library[0m
+[0;32mI (1175) example: buf1@0x3ffd909c, buf2@0x3ffe46bc[0m
+[0;32mI (1175) example: Register display driver to LVGL[0m
+[0;32mI (1175) example: Install LVGL tick timer[0m
+[0;32mI (1175) wifi_connect: Initializing WiFi STA[0m
+[0;32mI (1215) wifi:wifi driver task: 3ffe2dcc, prio:23, stack:6656, core=0[0m
+[0;32mI (1225) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (1225) wifi:wifi certification version: v7.0[0m
+[0;32mI (1225) wifi:config NVS flash: enabled[0m
+[0;32mI (1225) wifi:config nano formatting: disabled[0m
+[0;32mI (1235) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1235) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1235) wifi:Init management short buffer num: 32[0m
+[0;32mI (1245) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1245) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1255) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1255) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1265) wifi_init: rx ba win: 6[0m
+[0;32mI (1265) wifi_init: accept mbox: 6[0m
+[0;32mI (1265) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1265) wifi_init: udp mbox: 6[0m
+[0;32mI (1275) wifi_init: tcp mbox: 6[0m
+[0;32mI (1275) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1275) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1285) wifi_init: tcp mss: 1440[0m
+[0;32mI (1285) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1285) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1295) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (1375) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (1465) wifi:mode : sta (d4:8a:fc:c4:78:90)[0m
+[0;32mI (1475) wifi:enable tsf[0m
+[0;32mI (1475) wifi_connect: wifi_init_sta finished.[0m
+[0;32mI (1475) wifi_connect: Trying to connect to the AP...[0m
+[0;32mI (1475) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1485) ENCODER: encoder init[0m
+[0;32mI (1485) I2C: Driver install OK[0m
+[0;32mI (1495) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1495) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (1505) AHT10: Init failed: ESP_FAIL[0m
+[1;31mE (1505) uart: uart_set_pin(723): tx_io_num error[0m
+[0;32mI (1515) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1525) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1545) wifi:connected with TP-Link_IoT_CD44, aid = 1, channel 8, BW20, bssid = ea:6e:84:e2:cd:43[0m
+[0;32mI (1545) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (1555) wifi:pm start, type: 1[0m
+
+[0;32mI (1555) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1575) wifi:<ba-add>idx:0 (ifx:0, ea:6e:84:e2:cd:43), tid:7, ssn:0, winSize:64[0m
+[0;32mI (1585) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[1;31mE (1705) MAX30102: Invalid MAX30102 ID: 0x00[0m
+[1;31mE (1705) I2C: MAX30102 init failed[0m
+[0;32mI (1705) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1705) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1715) gpio: GPIO[3]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1725) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1735) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1735) Hardware: All hardware initialized.[0m
+[0;32mI (1745) SNTP: Initializing SNTP[0m
+[0;32mI (1745) SNTP: Waiting for system time to be set... (1/10)[0m
+[0;32mI (2605) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2605) wifi_connect: Got IP:192.168.0.104[0m
+[0;32mI (3755) SNTP: Waiting for system time to be set... (2/10)[0m
+[0;32mI (4565) wifi:<ba-add>idx:1 (ifx:0, ea:6e:84:e2:cd:43), tid:0, ssn:0, winSize:64[0m
+[0;32mI (5755) SNTP: TIME : 125/122[0m
+[0;32mI (5755) time_display: start[0m
+[0;32mI (5
